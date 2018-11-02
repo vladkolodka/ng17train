@@ -12,9 +12,9 @@ export class ProductsService {
 
   getProducts(): IProduct[] {
     return [
-      new ProductModel('Item 1', 'Do smth', 5, ProductCategory.Items, true, ['consists of several parts', '...', '123']),
-      new ProductModel('RDR2', 'RDR2 game', 15, ProductCategory.Games, true, ['ps only', '...']),
-      new ProductModel('Film', 'Fome film', 2, ProductCategory.Discs, false, ['old film', '...']),
+      new ProductModel(0, 'Item 1', 'Do smth', 5, ProductCategory.Items, true, ['consists of several parts', '...', '123']),
+      new ProductModel(1, 'RDR2', 'RDR2 game', 15, ProductCategory.Games, true, ['ps only', '...']),
+      new ProductModel(2, 'Film', 'Fome film', 2, ProductCategory.Discs, false, ['old film', '...']),
     ];
   }
 }

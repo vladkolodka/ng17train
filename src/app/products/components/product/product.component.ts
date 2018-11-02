@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { ProductCategory } from '../../models/product-category.enum';
 import { IProduct } from '../../models/iproduct';
 
@@ -15,12 +15,15 @@ export class ProductComponent implements OnInit {
   // isAvaliable: boolean;
   // characteristics: string[] = ['1', '2', '3'];
   @Input() product: IProduct;
+  @Output() buyed: EventEmitter<IProduct> = new EventEmitter<IProduct>();
+
   constructor() { }
 
   ngOnInit() {
   }
 
   onBuy() {
-    console.log(`Product '${name}' is buyed.`);
+    console.log(`Product '${this.product.name}' is buyed.`);
+    this.buyed.emit(this.product);
   }
 }

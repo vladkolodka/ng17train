@@ -1,0 +1,9 @@
+- product component
+- product list component
+- product service
+  + get items
+- cart component
+- cart service
+  + get all items
+  + remove item (additional)
+  + add item

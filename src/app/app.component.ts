@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CartService } from './cart/services/cart.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'shop';
+
+  constructor(public cartService: CartService) {
+  }
+
+  isCartEmpty(): boolean {
+    return this.cartService.getContents().length === 0;
+  }
 }
