@@ -1,0 +1,35 @@
+<table>
+  <tr>
+    <td>Name</td>
+    <td>{{ name }}</td>
+  </tr>
+  <tr>
+    <td>Description</td>
+    <td>{{ description }}</td>
+  </tr>
+  <tr>
+    <td>Price</td>
+    <td>{{ price }}</td>
+  </tr>
+  <tr>
+    <td>Category</td>
+    <td>{{ category }}</td>
+  </tr>
+  <tr>
+    <td>IsAvailable</td>
+    <td>{{ isAvaliable }}</td>
+  </tr>
+  <tr>
+    <td>Characteristics</td>
+    <td>
+      <ul class="characteristics">
+        <li *ngFor="let c of characteristics">{{ c }}</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <button class="buy-button" (click)="onBuy()">buy</button>
+    </td>
+  </tr>
+</table>
