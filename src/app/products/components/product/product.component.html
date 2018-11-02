@@ -1,29 +1,29 @@
 <table>
   <tr>
     <td>Name</td>
-    <td>{{ name }}</td>
+    <td>{{ product.name }}</td>
   </tr>
   <tr>
     <td>Description</td>
-    <td>{{ description }}</td>
+    <td>{{ product.description }}</td>
   </tr>
   <tr>
     <td>Price</td>
-    <td>{{ price }}</td>
+    <td>{{ product.price }}</td>
   </tr>
   <tr>
     <td>Category</td>
-    <td>{{ category }}</td>
+    <td>{{ product.category }}</td>
   </tr>
   <tr>
     <td>IsAvailable</td>
-    <td>{{ isAvaliable }}</td>
+    <td>{{ product.isAvailable }}</td>
   </tr>
   <tr>
     <td>Characteristics</td>
     <td>
       <ul class="characteristics">
-        <li *ngFor="let c of characteristics">{{ c }}</li>
+        <li *ngFor="let c of product.characteristics">{{ c }}</li>
       </ul>
     </td>
   </tr>
