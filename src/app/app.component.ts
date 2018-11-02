@@ -13,6 +13,6 @@ export class AppComponent {
   }
 
   isCartEmpty(): boolean {
-    return this.cartService.getContents().length === 0;
+    return !this.cartService.hasItems();
   }
 }

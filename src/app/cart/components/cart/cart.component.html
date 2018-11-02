@@ -1,5 +1,5 @@
 <h3>Cart</h3>
 <p>Items:</p>
 <ul>
-  <li *ngFor="let item of getItems()"> {{ item.name }} <a href="#" (click)="removeItem($event,item.id)">Remove</a></li>
+  <li *ngFor="let item of items | async"> {{ item.name }} <a href="#" (click)="removeItem($event,item.id)">Remove</a></li>
 </ul>
