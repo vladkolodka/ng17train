@@ -1,0 +1,8 @@
+<div>
+  <app-cart *ngFor="let product of products | async" [product]="product" (remove)="onRemoveFromCart($event)"
+    (amountChange)="onAmountChange($event, product)"></app-cart>
+
+  <hr>
+  <p>Amount: <strong>{{amount | async}}</strong></p>
+  <p>Total price: <strong>{{totalPrice | async}}$</strong></p>
+</div>

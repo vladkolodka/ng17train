@@ -39,7 +39,7 @@
                 Amount:
 
                 <button (click)="addAmount(-1)">-</button>
-                <input type="number" [(ngModel)]="amount" class="amount">
+                <input type="number" [(ngModel)]="amount" class="amount" min="1">
                 <button (click)="addAmount(1)">+</button>
               </td>
               <td>

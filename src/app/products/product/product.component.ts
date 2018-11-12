@@ -1,10 +1,11 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { ProductModel } from '../models/product-model';
 
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
-  styleUrls: ['./product.component.css']
+  styleUrls: ['./product.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductComponent implements OnInit {
   @Input() product: ProductModel;
@@ -23,11 +24,17 @@ export class ProductComponent implements OnInit {
   }
 
   onBuy() {
+    if (this.amount <= 0) {
+      alert('Bad price!');
+    }
+
     this.buy.emit(this.amount);
   }
 
   addAmount(count: number) {
-    this.amount += count;
+    if (this.amount + count >= 1) {
+      this.amount += count;
+    }
   }
 
 }

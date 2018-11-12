@@ -1,0 +1,11 @@
+<table border="1" width="100%">
+  <tr>
+    <td>{{product.name}}</td>
+    <td>
+      <input type="number" [(ngModel)]="product.amount" (change)="onAmountChange()" style="width: 30px" min="1" />
+    </td>
+    <td width="10">
+      <button (click)="onRemove()">Remove</button>
+    </td>
+  </tr>
+</table>
