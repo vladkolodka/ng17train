@@ -1,0 +1,36 @@
+tbody tr>td:first-child {
+  font-weight: bold;
+  background-color: rgba(235, 238, 244, 0.7);
+  width: 10%;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: rgba(235, 238, 0, 0.08);
+}
+
+.header-avaliable {
+  color: green;
+}
+
+.header-unavaliable {
+  color: red;
+}
+
+.header-unavaliable::after {
+  content: " [unavaliable]";
+}
+
+.category{
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.amount{
+  width: 35px;
+}
+
+.amount_cell{
+  width: 15%;
+}
